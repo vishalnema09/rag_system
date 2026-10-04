@@ -1,0 +1,13 @@
+RAG Practice Document 2: Retrieval Augmented Generation
+
+RAG stands for Retrieval Augmented Generation.
+
+A RAG system retrieves relevant information from a knowledge base
+and provides that information to a language model before generating
+an answer.
+
+A typical RAG pipeline contains document loading, text splitting,
+embedding generation, vector storage, retrieval, and generation.
+
+RAG is useful when an AI application needs to answer questions
+using information from custom documents.

@@ -1,0 +1,12 @@
+RAG Practice Document 1: Python Introduction
+
+Python is a high-level programming language.
+It is widely used for web development, automation, data science,
+machine learning, and artificial intelligence.
+
+Python uses simple and readable syntax.
+Variables do not require explicit type declarations.
+
+Example:
+name = "Vishal"
+age = 24
