@@ -1,0 +1,69 @@
+Artificial Intelligence: Past, Present and Future
+
+Introduction
+
+Artificial intelligence, usually shortened to AI, is the field of computer science concerned with building systems that can perform tasks which normally require human intelligence. These tasks include understanding language, recognizing images, making decisions, solving problems, translating between languages and learning from experience. Over the last decade AI has moved from research laboratories into everyday life. It powers the recommendations we see on streaming platforms, the spam filters in our email, the voice assistants on our phones and the navigation apps that guide us through traffic. This essay looks at where AI came from, how modern AI systems work, where they are used today, the risks and ethical questions they raise, and what the future may hold.
+
+The History of Artificial Intelligence
+
+The idea of thinking machines is old, but AI as a scientific discipline began in the 1950s. In 1950 the British mathematician Alan Turing published a paper titled "Computing Machinery and Intelligence", in which he asked whether machines can think and proposed what is now called the Turing Test. In this test, a human judge holds a text conversation with both a machine and a person; if the judge cannot reliably tell which is which, the machine is said to show intelligent behaviour.
+
+The term "artificial intelligence" was coined in 1956 at the Dartmouth Summer Research Project, organized by John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon. The researchers who gathered there were optimistic. They believed that every aspect of learning and intelligence could, in principle, be described precisely enough for a machine to simulate it. Early programs could prove mathematical theorems, play checkers and solve algebra word problems, and many people expected human-level AI within a generation.
+
+That optimism did not last. Early systems worked only on small, carefully designed problems and failed when faced with the complexity of the real world. Computers were slow, memory was expensive and there was very little digital data to learn from. When results fell short of promises, funding was cut, leading to periods known as "AI winters" in the 1970s and again in the late 1980s.
+
+In the 1980s, expert systems brought a temporary revival. An expert system encoded the knowledge of human specialists as a large set of if-then rules. Systems such as MYCIN, which helped diagnose bacterial infections, showed that rule-based AI could be useful in narrow domains. However, these systems were expensive to build, hard to maintain and unable to learn on their own. Every new piece of knowledge had to be written by hand.
+
+The Rise of Machine Learning
+
+The modern era of AI is built on machine learning. Instead of programming explicit rules, machine learning systems learn patterns from examples. A spam filter, for instance, is not told exactly which words make an email spam; instead it is shown thousands of emails labeled as spam or not spam and learns the statistical patterns that separate the two.
+
+Three forces made machine learning take off in the 2000s and 2010s. The first was data: the internet, smartphones and digital services produced enormous amounts of text, images, audio and user behaviour data. The second was computing power, especially graphics processing units, or GPUs, which turned out to be very good at the large matrix calculations that learning algorithms require. The third was better algorithms, particularly in the area of neural networks.
+
+Neural networks are loosely inspired by the brain. They consist of layers of simple units, often called neurons, connected by weighted links. During training the weights are adjusted step by step so that the network's outputs move closer to the correct answers. Networks with many layers are called deep neural networks, and the approach is known as deep learning. In 2012 a deep network called AlexNet won the ImageNet image recognition competition by a large margin, and this result convinced much of the research community that deep learning was the way forward. Within a few years deep learning had transformed speech recognition, image classification and machine translation.
+
+Large Language Models and Generative AI
+
+In 2017 researchers at Google introduced the transformer architecture in a paper titled "Attention Is All You Need". Transformers use a mechanism called attention, which lets the model weigh how relevant every word in a sentence is to every other word. This made it possible to train much larger models on much larger amounts of text, and to do so efficiently in parallel.
+
+Transformers led to large language models, or LLMs. An LLM is trained on huge collections of text to predict the next word in a sequence. Although this objective sounds simple, models trained at sufficient scale learn grammar, facts about the world, reasoning patterns and even some ability to write code. After this pre-training stage, models are usually fine-tuned with human feedback so that they follow instructions, answer helpfully and avoid harmful content. The result is the class of AI assistants that can draft emails, summarize documents, answer questions, explain concepts and help programmers write software.
+
+Generative AI goes beyond text. Diffusion models can create realistic images from a short written description, other models generate music, speech and video, and multimodal models can look at an image and answer questions about it. These capabilities have opened new creative possibilities but have also raised concerns about misinformation, deepfakes and the rights of the artists and writers whose work was used for training.
+
+Retrieval-Augmented Generation
+
+One important limitation of language models is that their knowledge is fixed at the time of training, and they can sometimes produce confident but incorrect statements, a problem often called hallucination. Retrieval-augmented generation, or RAG, is a popular technique for reducing this problem. In a RAG system, documents are first split into smaller chunks and converted into numerical vectors called embeddings, which capture the meaning of the text. These vectors are stored in a vector database or search engine such as Typesense, FAISS or Chroma.
+
+When a user asks a question, the question is also converted into an embedding, and the system searches the database for the chunks whose meaning is closest to the question. Those relevant chunks are then passed to the language model together with the question, and the model is instructed to answer using the provided context. Because the answer is grounded in retrieved documents, it can include up-to-date or private company information that the model never saw during training, and the system can show citations so users can check where the answer came from. RAG is widely used for customer support bots, internal knowledge assistants, legal and medical research tools and documentation search.
+
+Applications of AI Today
+
+AI is now used across almost every industry. In healthcare, AI models help radiologists detect tumors in medical images, predict which patients are at risk of complications and speed up drug discovery by predicting how molecules will behave. DeepMind's AlphaFold, which predicts the three-dimensional structure of proteins, is widely regarded as one of the most important scientific contributions of AI so far.
+
+In finance, AI systems detect fraudulent transactions, assess credit risk and support algorithmic trading. In transportation, machine learning powers route planning, demand forecasting and driver-assistance features, while companies continue to work on fully self-driving vehicles. In agriculture, computer vision helps farmers monitor crop health and use water and fertilizer more efficiently. In education, AI tutors can give students personalized explanations and practice problems at their own pace.
+
+In software development, AI coding assistants suggest code, explain unfamiliar codebases, write tests and find bugs, changing the daily work of many programmers. In customer service, chatbots answer common questions at any hour, leaving human agents free to handle complex cases. Retailers use AI for recommendations, inventory planning and pricing, and media companies use it for content moderation and personalization.
+
+Risks and Ethical Challenges
+
+Alongside these benefits, AI brings serious challenges. One of the most discussed is bias. Machine learning models learn from historical data, and if that data reflects unfair treatment of certain groups, the model may repeat or even amplify that unfairness. Biased systems used in hiring, lending, policing or healthcare can cause real harm, so developers need to test models carefully across different groups and be transparent about their limitations.
+
+Privacy is another concern. AI systems are trained on large amounts of data, some of which may be personal. Facial recognition, location tracking and behavioural profiling can be used for surveillance in ways that threaten individual freedom. Strong data protection laws and responsible design practices are needed to make sure people keep control over their information.
+
+Misinformation is a growing problem in the age of generative AI. It is now cheap to produce convincing fake text, images, audio and video. This can be used for fraud, political manipulation and harassment. Researchers are working on watermarking and detection tools, and platforms are developing policies, but there is no complete solution yet.
+
+AI also affects employment. Automation can replace some routine tasks, from data entry to parts of customer support and content writing. History suggests that new technologies also create new kinds of jobs, but the transition can be painful for the workers affected. Governments, companies and schools will need to invest in retraining and education so that people can adapt.
+
+Finally, there are questions about safety and control as AI systems become more capable. Researchers in the field of AI alignment study how to make sure that powerful systems reliably do what their designers intend, remain honest, and avoid causing harm, even in situations their creators did not anticipate. Many governments have begun to create regulations, such as the European Union's AI Act, that require higher standards of testing and transparency for high-risk uses of AI.
+
+The Future of Artificial Intelligence
+
+It is difficult to predict exactly how AI will develop, but several trends seem likely. Models will continue to become more capable and more efficient, and smaller models will run directly on phones and laptops without needing a connection to the cloud. AI agents, which can plan multi-step tasks, use software tools and take actions on behalf of users, are becoming more common. Multimodal systems that combine text, images, audio and video will make interactions with computers feel more natural.
+
+AI is also likely to accelerate science. Systems that can read research papers, propose hypotheses, design experiments and analyze results could speed up progress in medicine, materials science, climate research and many other fields. At the same time, the energy consumption of training and running large models is an important environmental issue that the industry must address through more efficient hardware and algorithms.
+
+The most important question may not be what AI can do, but how society chooses to use it. Technology itself is neither good nor bad; its impact depends on the decisions made by the people who build, regulate and use it. Careful design, open research, sensible regulation and broad public understanding will all be needed to make sure the benefits of AI are widely shared and its risks are kept under control.
+
+Conclusion
+
+Artificial intelligence has travelled a long road, from the optimistic predictions of the 1950s, through the disappointments of the AI winters, to the deep learning revolution and today's large language models. It now helps doctors diagnose disease, helps programmers write code, helps scientists understand proteins and helps millions of people find information every day. Techniques such as retrieval-augmented generation make AI systems more accurate and trustworthy by grounding their answers in real documents. Yet AI also raises real concerns about bias, privacy, misinformation, employment and safety. The future of AI will be shaped by how wisely we handle these challenges. If developed responsibly, artificial intelligence has the potential to be one of the most beneficial technologies humanity has ever created.
