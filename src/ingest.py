@@ -80,3 +80,24 @@ def ingest_file(file_path: str, reindex: bool = False) -> None:
     )
 
     print(f"Stored {len(docs)} chunks in collection: {config.COLLECTION_NAME}")
+
+
+def ingest(backend: str = config.DEFAULT_BACKEND, path: str = None, reindex: bool = False) -> None:
+    """
+    Store documents in the chosen vector store.
+
+    Args:
+        backend: 'typesense' (one text file) or 'chroma' (a folder of PDFs)
+        path: Text file or PDF folder (the default data of the backend is used if not given)
+        reindex: Delete the old data and store it again
+    """
+
+    config.check_settings(backend)
+
+    if backend == "typesense":
+        ingest_file(str(path or config.DEFAULT_TEXT_FILE), reindex=reindex)
+    elif backend == "chroma":
+        from src.pdf_store import ingest_pdfs
+        ingest_pdfs(path or config.DEFAULT_PDF_DIR, reindex=reindex)
+    else:
+        raise ValueError(f"Unknown backend '{backend}'. Choose one of: {', '.join(config.BACKENDS)}")

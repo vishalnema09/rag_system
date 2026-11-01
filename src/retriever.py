@@ -1,6 +1,6 @@
 # Typesense connection - builds the client, the embedding model and the retriever
 import typesense
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Typesense
 
 from src import config
@@ -23,7 +23,7 @@ def get_typesense_client() -> typesense.Client:
 def get_embeddings() -> HuggingFaceEmbeddings:
     """Load the embedding model (downloads sentence-transformers/all-mpnet-base-v2 on the first run)"""
 
-    return HuggingFaceEmbeddings()
+    return HuggingFaceEmbeddings(model_name=config.TYPESENSE_EMBEDDING_MODEL)
 
 
 def get_vectorstore(embeddings: HuggingFaceEmbeddings = None) -> Typesense:
